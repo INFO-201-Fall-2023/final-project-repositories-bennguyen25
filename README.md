@@ -2,12 +2,16 @@
 final-project-repositories-bennguyen25 created by GitHub Classroom
 
 Weixuan Teng/Ben Nguyen
+
 Apr23
+
 Info 201
+
 Project Proposal
 
 
 Story Pitch
+
 In Asia, a fascinating relationship exists between happiness and suicide rates. Despite some region's technological advancements, high standards of living, and strong economies, some Asian countries are still known for having high suicide rates.(such as Japan) Our story aims to explore this paradoxical relationship and dive into the factors that contribute to this phenomenon across Asia.
  
 Our story will investigate why happiness levels in some Asian countries don't necessarily correlate with their suicide rates. We will analyze data from the "World Happiness Report" and "Suicides" datasets from Our World in Data and Kaggle to find patterns and correlations that can provide insights into this situation.
@@ -17,6 +21,7 @@ This story will be engaging and intriguing because it will question widely held 
 To get a better grasp of the cultural and economic backgrounds of vastly different Asian countries, we will reference scholarly articles, news stories, and expert interviews for background research and inspiration. We will also look at various policies or interventions that have been done or proposed to address this issue in Asia and other places that face comparable challenges.
 
 Finding Data
+
 Dataset 1: Suicides from Our World in Data
 
 Where did you download the data ?
@@ -48,11 +53,10 @@ How many features (columns) are in the data?
 The dataset has 10 columns: country, year, happiness score, GDP per capita, social support, healthy life expectancy, freedom to make life choices, generosity, perceptions of corruption, regional indicator, and rank based on the happiness score.
 
 Background Research/Inspiration
+
 Japan Times - Suicide spike in Japan shows mental health toll of COVID-19
 URL:https://www.japantimes.co.jp/news/2020/10/09/national/social-issues/suicide-mental-health-coronavirus/
 Our project focuses on the relationship between happiness and suicide rates in Asia. This article inspired us because it helps us understand the different contexts in Asia and specifically Japan, but our project will go further by analyzing the data and visualizing the relationship between happiness and suicide rates.
-
-
 
 The Guardian - Japan vows to cut suicide rate by 20% over 10 years
 URL:https://www.theguardian.com/world/2014/sep/04/japan-vows-suicide-rate-cut-cultural-resistance-mental-health
