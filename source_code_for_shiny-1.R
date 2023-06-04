@@ -18,7 +18,7 @@ library(here)
 
 options(scipen=999)
 theme_set(theme_minimal())
-data <- readr::read_csv(here("data/final_data.csv"))
+data <- read.csv("combined_asian_df.csv")
 
 ### FUNCTIONS & TEXT
 
@@ -47,8 +47,6 @@ text <- function(num){
            text4,
            text5,
            text6,
-           text7,
-           text8
     )
   )
 }
@@ -64,33 +62,52 @@ text0 <- HTML("<span style='font-size:20px'> How does suicide rate impact Asian 
               <br>Through our scrollytelling, we had separated all the Asian countries into different groups by their location. 
               You can clearly see the population of each country by looking at the size of each dot, also each region that the countries belonged to by looking at the colors. 
               <br>We invite you to join us on this interactive exploration. Unravel the complexities, appreciate the nuances, and contribute to the conversation that could pave the way for happier, healthier societies across Asia.
-              <br><br>
+              <br>
+              For some context, Suicide Rate in this case represents suicides per 100,000 people and the Happiness Score is based on a variety of factors, but we will focus more on GDP. This data also focuses on just the Asian continent in the year 2019, which is the most recent data found.
+              <br>
               <span style='font-size:18px'> How does suicide rate impact Asian countries’ happiness scores? </span>")
               
 text1 <- HTML("<H2> South Asia </H2>
-              <br> <p> There are 1855836119 people located in, <font color='#A00042'>South Asia</font> they have a average happiness score of <font color='#A00042'>4.526857%, they have a suicide rate of 8.602357%.")
+              <br> <p> There are 1,855,836,119 people located in <font color='#A00042'>South Asia</font>, they have an average happiness score of <font color='#A00042'>4.53</font> and have a suicide rate of <font color='#A00042'>8.6</font>.
+              The South Asia region is actually the unhappiest region of Asia. GDP also is not a big factor in their region as opposed to other regions. This suggests that countries are not doing as well
+              financially. Sri Lanka, the country that has the highest GDP factor, actually has the highest suicide rate in the region.")
 
 
 
 text2 <- HTML("<H2> East Asia </H2>
-              <br> <p> There are 1620347712 people located in, <font color='#F56C42'>East Asia</font> they have a average happiness score of <font color='#F56C4'>5.564250%, they have a suicide rate of 14.524575%.")
+              <br> <p> There are 1,620,347,712 people located in <font color='#F56C42'>East Asia</font>, they have an average happiness score of <font color='#F56C4'>5.56</font> and have a suicide rate of <font color='#F56C4'>14.52</font>.
+              It is interesting to note in this case, that despite South Korea having the highest Happiness Score of East Asia, they also have the highest suicide rate. GDP plays a big factor in South Korea's happiness index, which conversly
+              could mean that there may be wealth inequality aswell, which may explain their high suicide rate. East Asia is an interesting region since they have high societal pressures and cultural norms that influence their societies greatly.")
 
 text3 <- HTML("<H2> Southeast Asia </H2>
-              <br> <p> There are 659588356 people located in, <font color='#008640'>East Asia</font> they have a average happiness score of <font color='#008640'>5.333375%, they have a suicide rate of 5.516250%.")
+              <br> <p> There are 659,588,356 people located in <font color='#008640'>Southeast Asia</font>, they have an average happiness score of <font color='#008640'>5.33</font> and have a suicide rate of <font color='#008640'>5.52</font>.
+              However, amidst these statistics, one notable outlier emerges—Singapore. With a remarkable GDP factor of 1.572, Singapore has the highest happiness score and suicide rate among its neighboring countries. This difference in economic 
+              prosperity, coupled with its impact on the well-being of its citizens, sets Singapore apart as a unique case within the region. The country's strong GDP factor reflects its robust economy and affluent lifestyle, which can contribute to 
+              overall well-being. However, the comparison of high happiness scores and suicide rates suggests the presence of underlying complexities related to societal pressures, mental health, and the impact of rapid modernization, making 
+              Singapore a fascinating case study in the region.")
 
 
 text4 <- HTML("<H2> Central Asia </H2>
-              <br> <p> There are 74338950  people located in, <font color='#3487BD'>East Asia</font> they have a average happiness score of <font color='#3487BD'>5.5916%, they have a suicide rate of 9.200460%.")
+              <br> <p> There are 74,338,950  people located in <font color='#3487BD'>Central Asia</font>, they have an average happiness score of <font color='#3487BD'>5.59</font> and have a suicide rate of <font color='#3487BD'>9.2</font>.
+              It's interesting to note that, in contrast to other regions, happiness levels in Central Asia do not appear to be strongly influenced by GDP. But Kazakhstan stands out as an anomaly and offers a distinctive situation. Kazakhstan 
+              has the unlucky distinction of having the highest suicide rate among the region at 18 per 100,000 people, which is twice as high as the rate seen in Uzbekistan, who has the second-highest GDP factor. This disparity suggests that economic 
+              disparities within Central Asia may have an impact on their happiness scores, raising the possibility that wealth inequality is a contributing factor.")
 
 text5 <- HTML("<H2> Western Asia/Middle east  </H2>
-              <br> <p> There are 360697223 people located in, <font color='#C71C7E'>East Asia</font> they have a average happiness score of <font color='#C71C7E'>5.298%, they have a suicide rate of 4.438889%.")
+              <br> <p> There are 360,697,223 people located in <font color='#C71C7E'>Western Asia/Middle East</font>, they have an average happiness score of <font color='#C71C7E'>5.3</font> and have a suicide rate of <font color='#C71C7E'>4.44</font>.
+              Notably, this region exhibits the lowest suicide rate among the continents, with just half of Central Asia and South Asia's rates and a mere third of East Asia's rates. Furthermore, within Western Asia/Middle East, Israel emerges as the 
+              happiest country. Interestingly, despite Israel's high GDP factor, Israel's high happiness levels can be attributed to strong social cohesion, a rich cultural heritage, and investments in education and healthcare. 
+              These factors, along with a sense of community, personal growth opportunities, and the ability to find joy in everyday life, contribute to Israel's reputation as a happy country")
 
 
-text8 <- HTML("<H2> In Sum </H2>
-              <br> <p>All things considered, the average happiness rate of an average Asian person is <b>111%</b>.
+text6 <- HTML("<H2> In Summary </H2>
+              <br> <p>Asia is a diverse continent with many different regions. In all five of Asia's regions, a notable pattern can be seen: in four of the five, the region with the highest or nearly the highest GDP factor also has the highest suicide rate. 
+              This correlation points to a complex relationship between economic success and happiness. Economic growth can result in material wealth, but it can also lead to societal pressures, inequality, and the breakdown of social support 
+              networks—all of which have a negative impact on mental health and drive suicide rates up. This emphasizes how crucial it is to focus on social and mental well-being in addition to economic growth in order to ensure overall development and reduce the potentially harmful 
+              effects of wealth disparities.</b>
               <br>")
 
-concludingtext <- HTML("<p><span style='font-size:24px'><b>The Risk of Automation</b></span>
+concludingtext <- HTML("<p><span style='font-size:24px'><b>Suicide and Happiness in Asia</b></span>
                         <br>
                             <span style='font-size:18px'>Thank you for scrolling through the data that we analyzed. Navigating through the complexities of Asia's mental health landscape has offered us profound insights. 
                             Despite the rich cultural diversity and economic progress, Asia grapples with significant mental health challenges. High suicide rates, particularly in East and South Asia, underscore an urgent need for addressing mental health issues. 
@@ -106,23 +123,14 @@ technicalnotes <- HTML("<p>
                 <span style='font-size:18px'><i>Technical Notes</i></span><br>
                 <br>
                 <span style='font-size:12px'>
-                To learn more about how I made this app, please see the <a href='https://connorrothschild.github.io/r/automation-scrollytell/' target='_blank'>accompanying blog post</a>
+                Suicide rate per 100,000 people data comes from
+                <a href='https://www.who.int/data/gho/indicator-metadata-registry/imr-details/4664' target='_blank'>The World Health Organization</a>. 
                 <br>
-                Employment and education data comes from the
-                <a href='https://www.bls.gov/emp/documentation/education-training-system.htm' target='_blank'>Bureau of Labor Statistics</a>. 
+                Asia population data from 2019 comes from <a href='https://www.kaggle.com/datasets/sansuthi/asian-countries-by-population' target='_blank'>Kaggle</a>.
                 <br>
-                Employment and income data also comes from the <a href='https://www.bls.gov/oes/current/oes_nat.htm#11-0000' target='_blank'>BLS</a>.
+                Data on suicide rates for 2019 come from <a href='https://www.kaggle.com/datasets/unsdsn/world-happiness' target='_blank'>SUSTAINABLE DEVELOPMENT SOLUTIONS NETWORK(2019)</a>. 
                 <br>
-                Data on occupation and the risk of automation comes from <a href='https://www.oxfordmartin.ox.ac.uk/downloads/academic/The_Future_of_Employment.pdf' target='_blank'>Frey and Osborne (2013)</a>. 
-                <br>
-                <br>
-                Education is coded as typical education, meaning that the coded variable corresponds to the level of education that is most prevalent within a given occupation.
-                If 51% of accountants hold a bachelor's degree, their typical education will be coded as such.
-                Summary statistics for each level of education are calculated via the weighted mean of each occupation given its number of workers.
-                <br>
-                <br>
-                For more information on the technical details of this analysis, please see the <a href='https://connorrothschild.github.io/r/automation/' target='_blank'>accompanying blog post</a>. 
-                <br>
+                It is important to note that GDP per capita in this case is not the actual GDP per capita of the country, but rather how much of a factor it plays into the country's happiness score
                 <br>
                 The R packages powering this site include 
                 <a href='https://www.tidyverse.org/' target='_blank'>tidyverse</a>,
@@ -136,32 +144,30 @@ technicalnotes <- HTML("<p>
 ### ALL PLOT OBJECTS
 
 # helpers for all plots:
-cols <- c('No formal educational credential' = '#A00042','High school diploma or equivalent' = '#F56C42',
-          "Postsecondary nondegree award" = '#008640', "Associate's degree" = '#3487BD', 
-          "Bachelor's degree" = '#C71C7E', "Master's degree" = '#5E4FA2',
-          "Doctoral or professional degree" = '#1A1A1A') 
-
-legend_ord <- levels(with(data, reorder(typicaled, reveal)))
+cols <- c('South Asia' = '#A00042','East Asia' = '#F56C42',
+          "Southeast Asia" = '#008640', "Central Asia" = '#3487BD', 
+          "Western Asia/Middle East" = '#C71C7E') 
 
 ## Intro plot
 # Intro static ggplot
 introggPlot <- data %>% 
-  filter(typicaled != "Some college, no degree") %>%
   ggplot() +
-  geom_point(mapping=aes(x=A_MEDIAN, y=probability, size=TOT_EMP,
-                         alpha= 1/7, col=typicaled,
-                         text = glue::glue('<span style = "font-size:1.5em">{occupation}</span><br>
-                                                <i>Probability of Automation</i>: {probability}%
-                                                <i>Median Income</i>: ${comma(A_MEDIAN, digits = 0)}
-                                                <i>Number of Workers</i>: {comma(TOT_EMP, digits = 0)}'))) +
+  geom_point(mapping=aes(x=Score, y=Age_standardized_suicide_rate_Sex_both_sexes, size=Population,
+                         alpha= 1/7, col=Region,
+                         text = glue::glue('<span style = "font-size:1.5em">{Country}</span><br>
+                                                <i>Suicide rate </i>: {Age_standardized_suicide_rate_Sex_both_sexes}
+                                                <i>Happiness Score</i>: {comma(Score, digits = 2)}
+                                                <i>Region</i>: {Region}
+                                                <i>GDP Factor</i>: {GDP.per.capita}
+                                                <i>Population</i>: {comma(Population, digits = 0)}'))) +
   scale_size(range = c(1, 20), guide = 'none') +
-  xlab("\nMedian Income") +
-  ylab("Probability of Automation") +
-  # ggtitle("Likelihood of Job Automation vs Median Income") +
+  xlab("\nHappiness Score") +
+  ylab("Suicide rate") +
+  # ggtitle("Suicide Rates vs. Happiness Scores in Asia") +
   labs(size= "", col= "", alpha = "") + 
-  scale_color_manual(values = cols, breaks = legend_ord) +
-  scale_x_continuous(labels=scales::dollar_format(prefix="$"), limits = c(25000,200000)) +
-  scale_y_continuous(labels=scales::number_format(suffix="%"), limits = c(0,100)) +
+  scale_color_manual(values = cols) +
+  scale_x_continuous(limits = c(3, 8)) +
+  scale_y_continuous(limits = c(0,100)) +
   # theme(legend.position = "top", legend.direction = "horizontal") +
   # legend.text = element_text(colour = ifelse(add == reveal, "black", "grey"))) +
   # legend.text = element_text(colour="black", size = ifelse(add == reveal, 20, 12))) +
@@ -179,4 +185,4 @@ introPlot <- ggplotly(introggPlot, tooltip = 'text') %>%
     font = list(family = 'Lato'),
     margin = list(t=50),
     hoverlabel = list(bgcolor = 'whitesmoke', color = 'DarkGray')) %>% 
-  config(displaylogo = F, showSendToCloud = F, displayModeBar = F)
+  config(displaylogo = FALSE, showSendToCloud = FALSE, displayModeBar = FALSE)
